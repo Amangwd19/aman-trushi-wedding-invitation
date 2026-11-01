@@ -43,7 +43,7 @@
         if (!response.ok) throw new Error('The RSVP service is unavailable. Your text is still here; please retry.');
         const result = await response.json();
         if (!result || result.ok !== true || result.requestId !== pending.id) throw new Error((result && typeof result.error === 'string' && result.error.length < 240) ? result.error : 'Delivery could not be confirmed. Your text is still here; please retry.');
-        status.textContent = 'Thank you! Your RSVP was delivered to Aman on Telegram.';
+        status.textContent = 'Thank you! Your RSVP was delivered to Aman and Trushi.';
         form.reset();
         pending = null;
         form._rsvpPending = null;
